@@ -31,7 +31,6 @@ const SEO = ({
                 href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
                 integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
                 crossOrigin="anonymous"></link>
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-LT883YWQRK"></script>
             <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
             <meta name="google-site-verification" content="cjjcWBnEoVL7p0wuvHywaedD6h-3O0B2seFntNkt0jk" />
