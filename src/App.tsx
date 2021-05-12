@@ -1,20 +1,10 @@
-import { FCC } from 'fcc_typescript';
 import './App.scss';
-import { useState } from 'react';
+import Main from './components/Main';
+import Maths from './components/Math';
 import SEO from './SEO';
+import { useState } from 'react';
 const App = () => {
-    const [numberPeople, setNumberPeople] = useState(0);
-    const [money, setMoney] = useState(0);
-    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        switch (e.target.name) {
-            case 'money':
-                setMoney(Number(e.target.value));
-                break;
-            case 'Number_of_people':
-                setNumberPeople(Number(e.target.value));
-                break;
-        }
-    };
+    const [click, setClick] = useState(0);
     return (
         <div className="App" style={{ width: '100%', margin: '0px auto' }}>
             <SEO
@@ -25,34 +15,10 @@ const App = () => {
                 siteUrl={location.href}
                 siteName="割り勘"
             />
-            <header>
-                <h1>割り勘計算機</h1>
+            <header onClick={() => (click ? setClick(0) : setClick(1))}>
+                <h1>{click ? 'なんか色々できる隠し機能' : '割り勘計算機'}</h1>
             </header>
-            <main>
-                <div style={{ width: '10rem', margin: '0px auto' }}>
-                    <p>金額</p>
-                    <input type="text" onChange={onChange} name="money" style={{ width: '10rem', margin: '0px auto' }} />
-                </div>
-                <div style={{ width: '10rem', margin: '0px auto' }}>
-                    <p>人数</p>
-                    <input
-                        type="text"
-                        onChange={onChange}
-                        name="Number_of_people"
-                        style={{ width: '10rem', margin: '0px auto' }}
-                    />
-                </div>
-                <div>
-                    {Number.isNaN(numberPeople) && Number.isNaN(money) ? (
-                        <p>error</p>
-                    ) : (
-                        <>
-                            <p>1人あたり{FCC.Maths.quotient(money, numberPeople).answer}</p>
-                            <p>余り{FCC.Maths.quotient(money, numberPeople).surplus}</p>
-                        </>
-                    )}
-                </div>
-            </main>
+            <main>{click ? <Maths /> : <Main />}</main>
             <footer>
                 <div>
                     <a href="https://twitter.com/manyuta06" style={{ padding: '20px' }}>
