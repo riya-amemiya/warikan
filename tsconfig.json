@@ -1,5 +1,22 @@
 {
   "compilerOptions": {
+    "outDir": "build",
+    "removeComments": true,
+    "alwaysStrict": true,
+    "checkJs": false,
+    "downlevelIteration": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "importHelpers": false,
+    "incremental": true,
+    "strictBindCallApply": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
     "target": "es5",
     "lib": [
       "dom",
